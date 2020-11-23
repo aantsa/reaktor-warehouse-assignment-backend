@@ -8,7 +8,6 @@ require('dotenv/config');
 require('dotenv').config({ path: 'ENV_FILENAME' });
 
 //Middlewares
-app.use(cors());
 app.use(allowCrossDomain);
 app.use(bodyParser.json());
 
