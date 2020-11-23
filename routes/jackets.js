@@ -79,7 +79,7 @@ router.get('/:productName', async (req, res) => {
   }
 });
 
-jacketsData();
+// jacketsData();
 //setInterval(jacketsData, 300000)
 
 /**

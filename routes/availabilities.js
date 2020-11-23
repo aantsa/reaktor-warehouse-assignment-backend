@@ -56,7 +56,7 @@ const assignAvailabilityValue = async (id, DATAPAYLOAD) => {
   }
 }
 
-availabilityData();
+// availabilityData();
 // setInterval(availabilityData, 300000)
 
 /**

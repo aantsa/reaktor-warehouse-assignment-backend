@@ -79,7 +79,7 @@ router.get('/:productName', async (req, res) => {
   }
 });
 
-shirtsData();
+//shirtsData();
 //setInterval(shirtsData, 300000)
 
 /**

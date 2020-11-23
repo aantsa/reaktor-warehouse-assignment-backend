@@ -81,7 +81,7 @@ router.get('/:productName', async (req, res) => {
   }
 });
 
-accessoriesData();
+// accessoriesData();
 // setInterval(accessoriesData, 300000)
 
 /**
