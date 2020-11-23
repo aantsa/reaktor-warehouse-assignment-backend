@@ -8,25 +8,8 @@ require('dotenv/config');
 require('dotenv').config({ path: 'ENV_FILENAME' });
 
 //Middlewares
-app.use(allowCrossDomain);
+app.use(cors());
 app.use(bodyParser.json());
-
-var allowCrossDomain = function() {
-    var cors_api_host = 'reaktor-warehouse-backend.herokuapp.com';
-    var cors_api_url = 'https://' + cors_api_host + '/';
-    var slice = [].slice;
-    var origin = window.location.protocol + '//' + window.location.host;
-    var open = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function() {
-        var args = slice.call(arguments);
-        var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
-        if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
-            targetOrigin[1] !== cors_api_host) {
-            args[1] = cors_api_url + args[1];
-        }
-        return open.apply(this, args);
-    };
-}();
 
 //Import Routes
 const jacketsRoute = require('./routes/jackets');

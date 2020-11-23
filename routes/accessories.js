@@ -6,17 +6,7 @@ const Accessories = require('../models/Accessories');
 const apiUrl = 'https://bad-api-assignment.reaktor.com';
 const middle = '/products/';
 
-const allowedOrigins = ['https://someapp.com'];
-app.use(cors({
-    credentials: true,
-    origin: (origin, callback) => {
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true) 
-      } else {
-        callback(new Error(`Origin: ${origin} is now allowed`))
-      }
-    }
-  }));
+
 //GET BACK ALL THE ACCESSORIES
 router.get('/', async (req, res) => {
   try {
