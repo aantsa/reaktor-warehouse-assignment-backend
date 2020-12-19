@@ -1,3 +1,4 @@
 # Backend repository for my reaktor warehouse assignment
 
-[The assignment](https://github.com/aantsa/reaktor-warehouse-assignment-2021)
+This backend is hosted by Heroku.
+Link for the [assignment](https://github.com/aantsa/reaktor-warehouse-assignment-2021)
